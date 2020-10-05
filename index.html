@@ -1,0 +1,298 @@
+<html>
+  <head>
+    <title>Shopping</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      .HeadPhoto {
+        width: 100%;
+        height: width;
+      }
+      .BodyPhoto {
+        width: 100%;
+        height: width;
+      }
+      .LegsPhoto {
+        widows: 100%;
+        height: width;
+      }
+      .item {
+        width: inherit;
+        height: inherit;
+        display: none;
+      }
+      .item img {
+        width: 10vw;
+        height: inherit;
+      }
+      .active {
+        display: inline;
+      }
+      #photo {
+        width: 10vw;
+        height: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="PopUpModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="PopUpTitle"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-desc"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div
+        style="font-family: 'Roboto Condensed', sans-serif;font-size:3vw"
+        class="page-header text-center"
+      >
+        Hoodies and Beanies<br />Shop Now
+      </div>
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <ul class="HeadPhoto">
+              <li class="item active" id="HeadBlack">
+                <button
+                  type="button"
+                  class="btn btn-link"
+                  data-toggle="modal"
+                  data-target="#PopUpModal"
+                  data-id="HeadBlack"
+                  data-title="Black Beanie"
+                  data-desc="100% Cotten<br>handmade"
+                >
+                  <img
+                    src="https://www.bestworkwear.co.uk/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/b/c/bc447_black_ft.jpg"
+                    alt="Beanie"
+                    id="HeadBlackPhoto"
+                  />
+                </button>
+              </li>
+              <li class="item" id="HeadGrey">
+                <img
+                  src="https://cdna.lystit.com/photos/2013/09/18/blackcouk-grey-light-grey-beanie-hat-100-cashmere-product-1-13560740-269173268.jpeg"
+                  alt="1"
+                  id="Photo"
+                />
+              </li>
+            </ul>
+            <ul class="BodyPhoto">
+              <li class="item" id="BodyGreyMale">
+                <img
+                  src="https://www.customink.com/mms/images/catalog/styles/119700/catalog_detail_image_large.jpg"
+                  alt="Grey Hoodie"
+                  id="Photo"
+                />
+              </li>
+              <li class="item active" id="BodyBlackMale">
+                <img
+                  src="http://images.linnlive.com/0f07da56a55c7f45de92e853da03e921/1fc9a3be-ebe6-4abd-aabe-f72272a0f59d.jpg"
+                  alt="Black Hoodie"
+                  id="Photo"
+                />
+              </li>
+            </ul>
+            <ul class="LegsPhoto">
+              <li class="item active" id="LegBlackFemale">
+                <img
+                  src="http://media.topshop.com/wcsstore/TopShop/images/catalog/TS16H18JBLK_Zoom_F_1.jpg"
+                  alt="Leggins"
+                  id="Photo"
+                />
+              </li>
+              <li class="item" id="LegGreyMale">
+                <img
+                  src="http://media.burton.co.uk/wcsstore/Burton/images/catalog/BR23J00JGRN_Zoom_M_1.jpg"
+                  alt="Male Joggers"
+                  id="Photo"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <div
+              class="p-3 my-3 bg-dark text-white"
+              style="position: static;"
+            >
+              <div class="form-group">
+                <label for="HeadSelect">Head</label>
+                <select class="HeadSelect form-control" id="HeadSelect"
+                  ><option>Black</option>
+                  <option>Grey</option>
+                </select>
+                <br />
+                <label for="BodySelect">Body</label>
+                <select class="HeadSelect form-control" id="BodySelect"
+                  ><option>Black</option>
+                  <option>Grey</option>
+                </select>
+                <br />
+                <label for="LegSelect">Pants</label>
+                <select class="LegSelect form-control" id="LegSelect"
+                  ><option>Black - Female</option>
+                  <option>Grey - Male</option>
+                </select>
+              </div>
+              <div style="align-content: center;">
+                <input
+                  type="button"
+                  class="form-control btn btn-success"
+                  style="width:50%;"
+                  value="Buy Now"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Comments:</h3>
+            <div class="media border p-3">
+              <img
+                src="http://3.bp.blogspot.com/-urT7ukKgVS8/T9IS9jnG_qI/AAAAAAAABLQ/N8I_k9nvELg/s1600/self-portrait-04-med-712x1024.jpg"
+                alt="Joe Smith"
+                class="mr-3 mt-3 rounded-circle"
+                style="width:64px;height:64;border-radius: 50%;"
+              />
+              <div class="media-body">
+                <h4>
+                  Joe Smith <small><i>Posted on December 19, 2019</i></small>
+                </h4>
+                <p>
+                  Great Product!!!
+                </p>
+                <div class="media p-3">
+                  <img
+                    src="http://www.whale.to/c/sandra-cretu-4094.jpg"
+                    alt="Jane Doe"
+                    class="mr-3 mt-3 rounded-circle"
+                    style="width:64px;height:64;border-radius: 50%;"
+                  />
+                  <div class="media-body">
+                    <h4>
+                      Jamelia Miles
+                      <small><i>Posted on February 20 2016</i></small>
+                    </h4>
+                    <p>They Fit Perfectly</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-sm-6"
+            style="border:5px;border-radius: 20%;border-color: grey;align:right;"
+          >
+            <form action="" class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                name="Name"
+                id="Name"
+                placeholder="Name"
+              />
+              <input
+                class="form-control"
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Title"
+              />
+              <textarea
+                class="form-control"
+                name="Comment"
+                id="Comment"
+                cols="30"
+                rows="10"
+                placeholder="Comment"
+              ></textarea>
+              <input
+                class="form-control btn btn-primary"
+                type="button"
+                value="Submit"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $("#PopUpModal").on("shown.bs.modal", function(event) {
+          var button = $(event.relatedTarget);
+          var id = button.data("id");
+          var title = button.data("title");
+          var modal = $(this);
+          modal.find(".modal-title").text(title);
+          var pic = $("#" + id + "Photo")[0];
+          modal.find(".modal-desc").add(pic);//Set Class Visable 
+          console.log(pic);
+        });
+        $("#HeadSelect").change(function() {
+          if ($(this).val() == "Grey") {
+            $("#HeadGrey").addClass("active");
+            $("#HeadBlack").removeClass("active");
+          } else if ($(this).val() == "Black") {
+            $("#HeadBlack").addClass("active");
+            $("#HeadGrey").removeClass("active");
+          }
+        });
+        $("#BodySelect").change(function() {
+          if ($(this).val() == "Grey") {
+            $("#BodyGreyMale").addClass("active");
+            $("#BodyBlackMale").removeClass("active");
+          } else if ($(this).val() == "Black") {
+            $("#BodyBlackMale").addClass("active");
+            $("#BodyGreyMale").removeClass("active");
+          }
+        });
+        $("#LegSelect").change(function() {
+          if ($(this).val() == "Grey - Male") {
+            $("#LegGreyMale").addClass("active");
+            $("#LegBlackFemale").removeClass("active");
+          } else if ($(this).val() == "Black - Female") {
+            $("#LegBlackFemale").addClass("active");
+            $("#LegGreyMale").removeClass("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
